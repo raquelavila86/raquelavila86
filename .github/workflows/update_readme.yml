@@ -20,10 +20,18 @@ jobs:
     name: Update Profile README
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+
     steps:
+    - uses: actions/checkout@v4
+
+    - name: Update recent activity
+      uses: Readme-Workflows/recent-activity@v2.3.0
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    ## steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-      - uses: Readme-Workflows/recent-activity@v2.4.1
+    ##  - uses: actions/checkout@v4
+    ##  - uses: Readme-Workflows/recent-activity@v2.4.1
     ##  - uses: raquelavila86/checkout@v4 git@github.com:raquelavila86/raquelavila86.git
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     ##   env:
+     ##       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
