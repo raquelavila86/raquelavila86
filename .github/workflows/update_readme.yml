@@ -24,6 +24,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - uses: Readme-Workflows/recent-activity@v2.4.1
-      - uses: raquelavila86/checkout@v4 git@github.com:raquelavila86/raquelavila86.git
+    ##  - uses: raquelavila86/checkout@v4 git@github.com:raquelavila86/raquelavila86.git
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
